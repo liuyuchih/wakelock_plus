@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'wakelock_plus'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'Plugin that allows you to keep the device screen awake, i.e. prevent the screen from sleeping on Android, iOS, macOS, Windows, Linux, and web.'
   s.description      = <<-DESC
 Plugin that allows you to keep the device screen awake, i.e. prevent the screen from sleeping on Android, iOS, macOS, Windows, Linux, and web.
@@ -16,7 +16,7 @@ Plugin that allows you to keep the device screen awake, i.e. prevent the screen 
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
-  s.platform = :ios, '11.0'
+  s.platforms = { :ios => "11.0", :tvos => "12.0" }
 
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
